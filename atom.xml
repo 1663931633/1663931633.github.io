@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2022-09-29T07:19:27.216Z</updated>
+  <updated>2022-09-30T06:31:09.369Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title></title>
+    <link href="http://example.com/posts/0.html"/>
+    <id>http://example.com/posts/0.html</id>
+    <published>2022-09-30T06:31:09.024Z</published>
+    <updated>2022-09-30T06:31:09.369Z</updated>
+    
+    <content type="html"><![CDATA[<p>javascript组成</p><p>在<strong>浏览器端js</strong>是由三个部分组合起来</p><p><strong>1、ES</strong></p><p><strong>2、BOM 表示浏览器对象模型  就可以控制到浏览器功能</strong></p><p><strong>3、DOM 表示文档对象模型 用于控制页面上的元素</strong></p><p>js在HTML中的书写位置</p><p>行内、内嵌、外联</p><p><strong>注意：一旦使用外联方式(src属性指定) script标签中嵌套的代码无效</strong></p><p>js中输出语句<br>    <strong>console.log() 在控制台中输出内容 内容 可以是具体的数据 也可以是变量，如果涉及多个输出 可以使用逗号分割</strong></p><p>  变量：是数据的一种容器<br>    <strong>1、</strong>创建变量     var  变量名称;**<br>    <strong>2、变量赋值     变量名 &#x3D; 值</strong><br>    3、变量创建并且初始化  var 变量名称  &#x3D; 值;**</p><p><strong>数据类型</strong><br>    1、划分<br>        基本类型<br>            数字<br>            字符串<br>            布尔<br>            undefined<br>            null<br>        引用类型<br>            数组<br>            对象<br>            函数<br>    2、数字类型<br>        所有可以表示的数字 都是数字类型<br>        NaN:还是数字类型，但是无法表示<br>    3、字符串类型<br>        只要使用引号将内容包裹就是字符串，注意引号嵌套问题<br>        字符串拼接 js中使用+符号进行拼接的。+符号只有都是数字时才会进行加法运算 否则一律做拼接<br>    4、布尔<br>        表示事物两面，只有true与false两种值<br>    5、undefined<br>        一个变量创建了 但是没有赋值 系统默认为设置为undefined类型<br>    6、null<br>        表示空<br><strong>运算符</strong><br>    数学运算符<br>        +<br>        -<br>        *<br>                &#x2F;<br>        ​        %：求余数 可以通过求余数的操作 判断数字的是否是指定的一些倍数<br>    ​    比较运算符:得到的结果永远是布尔类型<br>        ​        &gt;<br>        ​        &lt;<br>        ​        &gt;&#x3D;<br>        ​        &lt;&#x3D;<br>        ​        &#x3D;&#x3D;:判断变量的值是否相等<br>        ​        !&#x3D;:判断变量的值不相等<br>        ​        &#x3D;&#x3D;&#x3D;：判断变量的数据类型与值都相等<br>        ​        !&#x3D;&#x3D;不全等</p><p><strong>运算符</strong><br>    逻辑运算符 最终得到的结果也是布尔值<br>    &amp;&amp; 表示并且 两边都是真 最终结果为真 否则就为假<br>    || 表示或者 只要有一个为真最终结果为真<br>    !  表示取反<br><strong>自增自减运算符</strong><br>    ++：将自身的值+1<br>    –:将自身的值-1<br>    自增运算符 区分前置与后置，<br>    前置 先自增&#x2F;自减 然后在运算<br>    后置  先运算 再自增&#x2F;自减<br><strong>类型转换</strong><br>    手动转换<br>        转换为数字<br>            Number:在转换字符串时 如果所有的字符全是数字 就可以转换，否则最终就是NaN<br>            parseInt:在转换字符串时从第一个字符开始 遇到非数字就结束。到结束还没有提取出数字 最终就是NaN<br>            parseFloat:与parseInt一致 但是可以支持小数<br>        转换为字符串<br>            1、内容.toString() 此方式对于undefined与null无效<br>            2、String(内容)<br>        转换为布尔值<br>            只有空字符串、数字0、undefined、null、NaN可以转换为false 其他的一律为true<br>    隐式转换<br>        代码执行过程中自动根据运算符进行转换<br><strong>if语句</strong><br>    if(表达式1){<br>        &#x2F;&#x2F;表达式1成立执行的代码块<br>    }else if (表达式2){<br>        &#x2F;&#x2F;表达式2成立的代码块<br>    }…else{<br>        &#x2F;&#x2F;所有表达式都不成立最后执行的代码块<br>    }</p><p><strong>switch语句</strong><br>    switch(表达式){<br>        case 值1:<br>            代码块<br>            break;<br>        …<br>        default：<br>            所有的case都不满足 就执行default代码块<br>            break;<br>    }<br>    如果case中 不使用break语句  导致就会继续向下执行 不会判断下一个case是否满足<br>    注意：表达式与每一个值是进行全等判断。if 是可以表示范围的条件 但是switch推荐是直接值相等判断<br><strong>三元</strong><br>    作用：简化if…else语句<br>    语法：表达式?代码1:代码2<br><strong>循环</strong><br>    1、作用：重复的执行某些代码段(可能针对于每次做的事情不一样)<br>    2、循环四要素<br>        1、循环做什么<br>        2、循环控制变量初始化<br>        3、循环控制变量条件<br>        4、循环控制变量变化<br>    3、while语句<br>        初始化语句<br>        while(表达式){<br>            循环体代码<br>            变量变更<br>        }<br>    4、do while语句<br>        初始化语句<br>        do{<br>            循环体代码<br>            变量变更<br>        }while(条件)<br>    5、for循环<br>        for(初始化循环控制变量;条件;循环变量变更){<br>            &#x2F;&#x2F;循环体代码<br>        }<br>    6、循环的控制语句<br>        break:只要遇到break就退出循环<br>        continue:遇到continue 是当前这一次循环退出 后面次数的循环继续<br><strong>运算符的优先级</strong><br>    先一元运算(++,–,.,[])&gt;二元运算符(针对两个内容&#x2F;变量使用的运算符)&gt;三元运算符(?:)<br>    如果不清楚优先级了 打括号</p><p>函数总结：</p><p>堆区：相对栈区空间大，但速度慢</p><p>栈区：相对于堆区空间小，但是速度快</p><p>基本数据类型</p><p>1、任何一个变量都会使用栈区的空间</p><p><strong>变量赋值    永远是将栈区的值进行赋值操作</strong></p><p>引用数据类型</p><p>先在栈区创建一个变量(空间)，将数据保存到堆区，再讲堆区的内存地址记录到栈的空间中</p><p>函数的作用</p><p>代码再次重复，所以导致代码重复了。解决方式使用函数。<strong>函数的最大特点就是一次定义多次调用</strong></p><p>形参与实参</p><p><strong>形参就是形式上的参数</strong></p><p><strong>实参就是实际的参数</strong></p><p>多个参数之间用逗号分隔</p><p><strong>实参是负责将实际的数据传送给形参，形参负责接收实参传送过来的实际数据</strong></p><p>如果变量是在函数调用过程中创建的变量。一旦函数运行完毕 内部的所有变量默认情况下全部被回收(垃圾回收机制)  </p><p>可变参数</p><p>1、形参比实参多的情况下</p><p><strong>形参比实参多情况 还是会按照顺序实参赋值给形参，但是多的形参都是undefined</strong></p><p>2、形参比实参少的情况</p><p><strong>形参比实参少情况,也会按照顺序赋值，多余的实参在函数体中没有直接变量可以对应起来.就舍弃掉了</strong></p><p>3、可变参数</p><p><strong>arguments 内置所提供的伪数组(元素从0下标开始并且也有length长度，形式向数组但是不是数组)。arguments每一个元素就对应着每一个实参 每一个function式的函数(声明式或者赋值式) 内置都有</strong></p><blockquote><p>arguments取参数尽量少用。平常封装函数都是使用有名称的形参表示</p></blockquote><p>函数的返回值</p><p>return</p><p>只要在函数中代码运行到return语句，不论后面还有多少代码都终止了</p><p>函数执行，并且将return的结果赋值给变量</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;javascript组成&lt;/p&gt;
+&lt;p&gt;在&lt;strong&gt;浏览器端js&lt;/strong&gt;是由三个部分组合起来&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;1、ES&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;2、BOM 表示浏览器对象模型  就可以控制到浏览器功能&lt;/strong&gt;&lt;</summary>
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>Hello World</title>
